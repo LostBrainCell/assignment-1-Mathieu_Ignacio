@@ -1,9 +1,11 @@
 from random import randint
 
 
-WeatherRating= randint(1, 3)  # Randomly select a weather condition (1: sunny, 2: rainy, 3: cloudy)    
-
+# WeatherRating= randint(1, 3)  # Randomly select a weather condition (1: sunny, 2: rainy, 3: cloudy)    
+WeatherRating= (2)
 listOfWeather = ["Sunny", "Rainy", "Stormy"]
+
+print("Weather Description: ", listOfWeather[WeatherRating - 1])
 
 # Sunny = no change
 # Rainy= snacks half price
