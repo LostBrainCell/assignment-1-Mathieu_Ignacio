@@ -18,11 +18,12 @@ if user_input == "yes":
         coupon = input("Do you have a coupon? (yes/no): ").lower()
         if coupon == "yes":
             ticketPrice -= 5
-            print(f"Mystery discount: ${randomDiscount}")
             ticketPrice -= randomDiscount
+            print(f"Mystery discount: ${randomDiscount}")
             print(f"Your ticket cost ${ticketPrice}")
         elif coupon == "no":
             ticketPrice -= randomDiscount
+            print(f"Mystery discount: ${randomDiscount}")
             print(f"Your ticket cost ${ticketPrice}")
     elif 12 < age <= 64:
         ticketPrice = 25
@@ -30,9 +31,11 @@ if user_input == "yes":
         if coupon == "yes":
             ticketPrice -= 5
             ticketPrice -= randomDiscount
+            print(f"Mystery discount: ${randomDiscount}")
             print(f"Your ticket cost ${ticketPrice}")
         elif coupon == "no":
             ticketPrice -= randomDiscount
+            print(f"Mystery discount: ${randomDiscount}")
             print(f"Your ticket cost ${ticketPrice}")
     elif age >= 65:
         ticketPrice = 15
@@ -40,9 +43,11 @@ if user_input == "yes":
         if coupon == "yes":
             ticketPrice -= 5
             ticketPrice -= randomDiscount
+            print(f"Mystery discount: ${randomDiscount}")
             print(f"Your ticket cost ${ticketPrice}")
         elif coupon == "no":
             ticketPrice -= randomDiscount
+            print(f"Mystery discount: ${randomDiscount}")
             print(f"Your ticket cost ${ticketPrice}")
 elif user_input == "no":
     print("Thanks maybe next time")

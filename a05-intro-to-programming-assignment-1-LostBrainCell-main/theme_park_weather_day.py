@@ -13,10 +13,11 @@ snackpass = 8
 parkingPrice = 10
 
 randomDiscount = randint(1, 5)
-user_input = input("Do you want to buy a ticket? (yes/no): ").lower() 
+print("Welcome to Dragon Coaster Park")
+user_input = input("Would you like to buy a ticket? (yes/no): ").lower() 
 
 if user_input == "yes":
-    age = int(input("What is your age?"))
+    age = int(input("Enter the guest age?"))
     if age < 5:
         ticketPrice = 0
         print("Your ticket is free")
@@ -35,37 +36,38 @@ if user_input == "yes":
         elif snacks == "no":
             snackpass = 0
         print("Your total is: $", ticketPrice + parkingPrice + snackpass)
-        breakpoint
+        breakpoint()
     elif 5 <= age <= 12: 
         ticketPrice = 12
         coupon = input("Do you have a coupon? (yes/no): ").lower()
         if coupon == "yes":
             ticketPrice -= 5
+            print(f"Mystery discount: ${randomDiscount}")
             ticketPrice -= randomDiscount
-            print(f"Your ticket price is ${ticketPrice}")
+            print(f"Your ticket cost ${ticketPrice}")
         elif coupon == "no":
             ticketPrice -= randomDiscount
-            print(f"Your ticket price is ${ticketPrice}")
+            print(f"Your ticket cost ${ticketPrice}")
     elif 12 < age <= 64:
         ticketPrice = 25
         coupon = input("Do you have a coupon? (yes/no): ").lower()
         if coupon == "yes":
             ticketPrice -= 5
             ticketPrice -= randomDiscount
-            print(f"Your ticket price is ${ticketPrice}")
+            print(f"Your ticket cost ${ticketPrice}")
         elif coupon == "no":
             ticketPrice -= randomDiscount
-            print(f"Your ticket price is ${ticketPrice}")
+            print(f"Your ticket cost ${ticketPrice}")
     elif age >= 65:
         ticketPrice = 15
         coupon = input("Do you have a coupon? (yes/no): ").lower()
         if coupon == "yes":
             ticketPrice -= 5
             ticketPrice -= randomDiscount
-            print(f"Your ticket price is ${ticketPrice}")
+            print(f"Your ticket cost ${ticketPrice}")
         elif coupon == "no":
             ticketPrice -= randomDiscount
-            print(f"Your ticket price is ${ticketPrice}")
+            print(f"Your ticket cost ${ticketPrice}")
 elif user_input == "no":
     print("Thanks maybe next time!")
 else:
